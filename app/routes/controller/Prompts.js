@@ -1,5 +1,7 @@
 const express = require('express')
 const router = express.Router()
+const { OpenAIService } = require('../../services/openai')
+
 router.use(express.json());
 
 router.post('/api/prompt', async (req, res) => {
@@ -51,6 +53,7 @@ router.post('/api/prompt', async (req, res) => {
                 });
             } else {
                 //TODO validate body and process
+                OpenAIService.call(req.body)
                 res.status(200).json({
                     status: 200,
                     message: 'OK',
