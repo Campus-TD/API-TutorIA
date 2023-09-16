@@ -30,6 +30,17 @@ npm run dev
 Una vez ejecutado el comando, la API estará corriendo en el puerto 3000. Para consumir la api se debe hacer llamados a los siguientes endpoints:
 
 - **POST:** `/api/prompt` - Para enviar el prompt al servidor y obtener la respuesta del modelo.
+```
+BODY:
+{
+    "id": "",
+    "name": "",
+    "subject": "",
+    "topic": "", 
+    "question": ""
+}
+```
+
 
 
 > **Nota:** ---
